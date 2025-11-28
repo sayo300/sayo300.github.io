@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>Wypożyczalnia - Dworek Hetmański</title>
-    <meta name="description" content="Dworek Hetmański w Moniochach. Organizacja wesel, chrzcin, spotkań firmowych i konferencji. Stworzymy dla Ciebie niezapomniane chwile.">
-    <meta property="og:image" content="./Assets/Images/og-image.webp">
+    <title>Wypożyczalnia Premium | Rowery, Kajaki | Dworek Hetmański</title>
+    
+    <meta name="description" content="Odkryj malownicze trasy z naszym nowoczesnym sprzętem! Wypożyczalnia rowerów elektrycznych i kajaków premium w Dworku Hetmańskim. Rezerwuj online!">
+    <meta property="og:image" content="./Assets/Images/og-image-rent.webp">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-    <!-- Libraries CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="css/lightbox.min.css">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/rent.css">
+    <link rel="stylesheet" href="./css/rent-modern.css">
 
     <!-- Favicon -->
     <link rel="icon" href="./Assets/Icons/favicon.svg">
 </head>
-
 <body>
 
     <!-- HEADER & HERO SECTION -->
@@ -45,9 +41,9 @@
                     <div class="navbar__menu-icon"></div>
                 </div>
                 <ul class="navbar__links">
-                    <li><a href="#about" class="navbar__link">O nas</a></li>
+                    <li><a href="#benefits" class="navbar__link">Dlaczego my?</a></li>
                     <li><a href="#offer" class="navbar__link">Oferta</a></li>
-                    <li><a href="#gallery" class="navbar__link">Galeria</a></li>
+                    <li><a href="#pricing" class="navbar__link">Cennik</a></li>
                     <li><a href="#contact" class="navbar__link">Kontakt</a></li>
                     <li><a href="index.html" class="navbar__link navbar__link--button">Dom Weselny</a></li>
                 </ul>
@@ -55,268 +51,201 @@
         </nav>
 
         <div class="hero__content">
-            <h1 class="hero__title" data-aos="fade-up">
-                <span class="hero__title--big-letter">W</span>ypożyczalnia
-                <span class="hero__title--big-letter">S</span>przętu
-            </h1>
-            <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="200">Odkryj piękno okolicy</p>
-            <a href="#about" class="hero__scroll-down">
-                <p>Odkryj</p>
-                <img src="./Assets/Icons/arrowIcon2.svg" alt="Przewiń w dół">
-            </a>
+            <h1 class="hero__title">Ruszaj na przygodę.</h1>
+            <p class="hero__subtitle">Odkryj piękno okolicy z naszym sprzętem premium. Gotowy na niezapomniane wrażenia?</p>
+            <div class="hero__cta-group">
+                <a href="#pricing" class="btn btn--primary">Sprawdź cennik</a>
+                <a href="#contact" class="btn btn--secondary">Zarezerwuj teraz</a>
+            </div>
         </div>
     </header>
 
-    <!-- MAIN CONTENT -->
     <main>
 
-        <section class="section main" id="main">
-                <div class="container grid grid--2-cols grid--centered">
-                    <div class="main__element">
-                        <div class="main__imgBorder">
-                            <img loading="lazy" src="https://placehold.co/600x400?text=Krajobraz" alt="Krajobraz" class="main__img">
-                        </div>
-                    </div>
-                    <div class="main__element main__element--right">
-                        <div class="main__item main__item--main">
-                            <p class="main__quote main__quote--color">Aktywny</p>
-                            <p class="main__quote main__quote--darken">wypoczynek</p>
-                            <p class="main__quote main__quote--small">dla każdego...</p>
-                        </div>
-                        <div class="main__item">
-                            <p class="main__text main__text--bold">Odkryj z nami piękno okolicy</p>
-                            <p class="main__text">Nasza wypożyczalnia to idealne miejsce dla wszystkich, którzy pragną aktywnie spędzić czas na łonie natury. Oferujemy nowoczesne rowery elektryczne oraz wytrzymałe kajaki, które pozwolą na odkrywanie uroków naszej malowniczej okolicy.</p>
-                        </div>
-                        <div class="main__item">
-                            <p class="main__text main__text--bold">Sprzęt dla każdego</p>
-                            <p class="main__text">Niezależnie od tego, czy jesteś zapalonym rowerzystą, czy miłośnikiem spływów kajakowych, u nas znajdziesz coś dla siebie. Dbamy o najwyższą jakość i bezpieczeństwo naszego sprzętu, aby zapewnić Ci niezapomniane wrażenia.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="offer__bgc">
-                <div class="container">
-                    <h2 class="offer__h2">Nasza Oferta</h2>
-                    <h2 class="offer__h2 offer__h2--second">Rowery i Kajaki</h2>
-                </div>
-            </section>
-            <section class="section offer" id="offer">
-				<div class="container">
-                <h2 class="gallery__h2__rent">Rowery Elektryczne</h2>
-                <div class="grid grid--4-cols">
-                    <span class="offer__item">
-                        <div class="offer__element">
-                            <img loading="lazy" src="https://placehold.co/400x300?text=Tabou+Wizz" alt="Tabou Wizz" class="offer__elementImg">
-                            <div class="offer__info">
-                                <h2 class="offer__elementTitle">Tabou Wizz (2 szt.)</h2>
-                                <p class="offer__infoText">Uniwersalny rower crossowy ze wspomaganiem elektrycznym. Idealny na dłuższe wycieczki po zróżnicowanym terenie.</p>
-                                <p class="offer__infoText"><b>Zasięg:</b> do 120 km<br><b>Silnik:</b> Bafang M200, 250W, 65Nm</p>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="offer__item">
-                        <div class="offer__element">
-                            <img loading="lazy" src="https://placehold.co/400x300?text=Tabou+Blade" alt="Tabou Blade" class="offer__elementImg">
-                            <div class="offer__info">
-                                <h2 class="offer__elementTitle">Tabou Blade (2 szt.)</h2>
-                                <p class="offer__infoText">Rower górski (MTB) z mocnym silnikiem, który poradzi sobie w trudniejszym terenie. Amortyzowany widelec zapewnia komfort jazdy.</p>
-                                <p class="offer__infoText"><b>Zasięg:</b> do 130 km<br><b>Silnik:</b> ANANDA M100, 250W, 110Nm</p>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="offer__item">
-                        <div class="offer__element">
-                            <img loading="lazy" src="https://placehold.co/400x300?text=Tabou+Kinetic" alt="Tabou Kinetic" class="offer__elementImg">
-                            <div class="offer__info">
-                                <h2 class="offer__elementTitle">Tabou Kinetic (3 szt.)</h2>
-                                <p class="offer__infoText">Rower trekkingowy, stworzony do turystyki. Wyposażony w bagażnik i błotniki, idealny na całodniowe wyprawy.</p>
-                                <p class="offer__infoText"><b>Zasięg:</b> do 140 km<br><b>Silnik:</b> Bafang M420, 250W, 80Nm</p>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="offer__item">
-                        <div class="offer__element">
-                            <img loading="lazy" src="https://placehold.co/400x300?text=Tabou+Mono" alt="Tabou Mono" class="offer__elementImg">
-                            <div class="offer__info">
-                                <h2 class="offer__elementTitle">Tabou Mono (2 szt.)</h2>
-                                <p class="offer__infoText">Miejski rower z niską ramą, ułatwiającą wsiadanie. Doskonały do spokojnej jazdy po okolicy i na zakupy.</p>
-                                <p class="offer__infoText"><b>Zasięg:</b> do 110 km<br><b>Silnik:</b> Bafang G020, 250W, 45Nm</p>
-                            </div>
-                        </div>
-                    </span>
-                </div>
-                <h2 class="gallery__h2__rent">Kajaki</h2>
-                <div class="grid grid--4-cols">
-                    <span class="offer-card">
-                        <div class="offer__element">
-                            <img loading="lazy" src="https://placehold.co/400x300?text=Kajak+Solina" alt="Kajak Solina" class="offer__elementImg">
-                            <div class="offer__info">
-                                <h2 class="offer__elementTitle">Kajaki Solina HDPE (15 szt.)</h2>
-                                <p class="offer__infoText">Niezwykle wytrzymałe i stabilne kajaki dwuosobowe z dodatkowym miejscem dla dziecka. Idealne na rodzinne spływy.</p>
-                                <p class="offer__infoText"><b>Długość:</b> 4,80 m<br><b>Szerokość:</b> 82 cm<br><b>Wyporność:</b> 340 kg</p>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="offer-card">
-                        <div class="offer__element">
-                            <img loading="lazy" src="https://placehold.co/400x300?text=Wios%C5%82a+Egalis" alt="Wiosła Egalis" class="offer__elementImg">
-                            <div class="offer__info">
-                                <h2 class="offer__elementTitle">Wiosła Egalis</h2>
-                                <p class="offer__infoText">Lekkie i wytrzymałe wiosła francuskiej firmy Egalis. Asymetryczne pióra zapewniają komfort i efektywność wiosłowania.</p>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="offer-card">
-                        <div class="offer__element">
-                            <img loading="lazy" src="https://placehold.co/400x300?text=Kamizelki" alt="Kamizelki asekuracyjne" class="offer__elementImg">
-                            <div class="offer__info">
-                                <h2 class="offer__elementTitle">Kamizelki Asekuracyjne</h2>
-                                <p class="offer__infoText">Zapewniamy certyfikowane kamizelki asekuracyjne we wszystkich rozmiarach, zarówno dla dorosłych, jak i dla dzieci.</p>
-                            </div>
-                        </div>
-                    </span>
-                </div>
-				</div>
-            </section>
-
-        <!-- GALLERY SECTION -->
-        <section id="gallery" class="section">
+        <section id="benefits" class="section">
             <div class="container">
-                <span class="subheading" data-aos="fade-up">Złapane w kadrze</span>
-                               <div class="gallery__grid" data-aos="fade-up" data-aos-delay="200">
-					<a href="./Assets/Photos/default/7.webp" data-lightbox="gallery" class="gallery__item">
-                        <img src="./Assets/Photos/miniatures/7.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
-                    </a>
-					 <a href="./Assets/Photos/default/1.webp" data-lightbox="gallery" class="gallery__item">
-                        <img src="./Assets/Photos/miniatures/1.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
-                    </a>
-					 <a href="./Assets/Photos/default/8.webp" data-lightbox="gallery" class="gallery__item">
-                        <img src="./Assets/Photos/miniatures/8.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
-                    </a>
-					 <a href="./Assets/Photos/default/9.webp" data-lightbox="gallery" class="gallery__item">
-                        <img src="./Assets/Photos/miniatures/9.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
-                    </a>
-                    <a href="./Assets/Photos/default/IMG_7772.webp" data-lightbox="gallery" class="gallery__item">
-                        <img src="./Assets/Photos/miniatures/IMG_7772.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
-                    </a>
-                    <a href="./Assets/Photos/default/IMG_7774.webp" data-lightbox="gallery" class="gallery__item">
-                        <img src="./Assets/Photos/miniatures/IMG_7774.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
-                    </a>
-                    <a href="./Assets/Photos/default/IMG_7775.webp" data-lightbox="gallery" class="gallery__item">
-                        <img src="./Assets/Photos/miniatures/IMG_7775.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
-                    </a>
-                    <a href="./Assets/Photos/default/IMG_7776.webp" data-lightbox="gallery" class="gallery__item">
-                        <img src="./Assets/Photos/miniatures/IMG_7776.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
-                    </a>
-                    <a href="./Assets/Photos/default/IMG_7781.webp" data-lightbox="gallery" class="gallery__item gallery__item--large">
-                        <img src="./Assets/Photos/miniatures/IMG_7781.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
-                    </a>
-                    <a href="./Assets/Photos/default/IMG_7783.webp" data-lightbox="gallery" class="gallery__item">
-                        <img src="./Assets/Photos/miniatures/IMG_7783.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
-                    </a>
-                    <a href="./Assets/Photos/default/IMG_7787.webp" data-lightbox="gallery" class="gallery__item">
-                        <img src="./Assets/Photos/miniatures/IMG_7787.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
-                    </a>
-                     <a href="./Assets/Photos/default/IMG_7791.webp" data-lightbox="gallery" class="gallery__item">
-                        <img src="./Assets/Photos/miniatures/IMG_7791.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
-                    </a>
-                    <a href="./Assets/Photos/default/IMG_7793.webp" data-lightbox="gallery" class="gallery__item">
-                        <img src="./Assets/Photos/miniatures/IMG_7793.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
-                    </a>
-					
-					 <a href="./Assets/Photos/default/2.webp" data-lightbox="gallery" class="gallery__item">
-                        <img src="./Assets/Photos/miniatures/2.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
-                    </a>
-					 <a href="./Assets/Photos/default/3.webp" data-lightbox="gallery" class="gallery__item">
-                        <img src="./Assets/Photos/miniatures/3.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
-                    </a>
-					 <a href="./Assets/Photos/default/5.webp" data-lightbox="gallery" class="gallery__item">
-                        <img src="./Assets/Photos/miniatures/5.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
-                    </a>
-					 <a href="./Assets/Photos/default/6.webp" data-lightbox="gallery" class="gallery__item">
-                        <img src="./Assets/Photos/miniatures/6.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
-                    </a>
-					
+                <span class="subheading">Gwarancja jakości i przygody</span>
+                <h2 class="section-title">Dlaczego warto nas wybrać?</h2>
+                <div class="grid grid--3-cols">
+                    <div class="benefit-card">
+                        <i class="ph-sparkle-fill icon"></i>
+                        <h3 class="benefit-card__title">Nowy i bezpieczny sprzęt</h3>
+                        <p>Wszystkie nasze rowery i kajaki to modele z roczników 2024/2025. Regularnie serwisowane, aby zapewnić Ci 100% bezpieczeństwa i komfortu.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="ph-map-trifold-fill icon"></i>
+                        <h3 class="benefit-card__title">Sprawdzone, malownicze trasy</h3>
+                        <p>Nie wiesz gdzie jechać? Udostępniamy mapy z najlepszymi trasami rowerowymi i kajakowymi w okolicy. Odkryj z nami ukryte perełki regionu!</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="ph-timer-fill icon"></i>
+                        <h3 class="benefit-card__title">Elastyczny czas wynajmu</h3>
+                        <p>Potrzebujesz sprzętu na godzinę, a może na cały weekend? U nas wynajmiesz tak, jak lubisz. Oferujemy atrakcyjne pakiety godzinowe i dobowe.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-
-
-        <section class="section">
+        <section id="offer" class="section section--bg-gray">
             <div class="container">
-                <h2 class="subheading">Regulamin Wypożyczalni</h2>
+                <span class="subheading">Nasza flota</span>
+                <h2 class="section-title">Wybierz swój sprzęt</h2>
+                
+                <h3 class="section-subtitle">Rowery Elektryczne</h3>
+                <div class="grid grid--4-cols">
+                    <div class="offer-card">
+                        <img src="https://placehold.co/400x300/284B63/FFFFFF?text=Tabou+Wizz" alt="Rower Tabou Wizz" class="offer-card__img">
+                        <div class="offer-card__content">
+                            <h4 class="offer-card__title">Tabou Wizz (Cross)</h4>
+                            <p class="offer-card__text">Uniwersalny e-bike na drogi asfaltowe i leśne ścieżki. Zasięg do 120 km.</p>
+                        </div>
+                    </div>
+                    <div class="offer-card">
+                        <img src="https://placehold.co/400x300/284B63/FFFFFF?text=Tabou+Blade" alt="Rower Tabou Blade" class="offer-card__img">
+                        <div class="offer-card__content">
+                            <h4 class="offer-card__title">Tabou Blade (MTB)</h4>
+                            <p class="offer-card__text">Górski e-bike dla wymagających. Pokonaj każde wzniesienie z silnikiem 110Nm. Zasięg do 130 km.</p>
+                        </div>
+                    </div>
+                    <div class="offer-card">
+                        <img src="https://placehold.co/400x300/284B63/FFFFFF?text=Tabou+Kinetic" alt="Rower Tabou Kinetic" class="offer-card__img">
+                        <div class="offer-card__content">
+                            <h4 class="offer-card__title">Tabou Kinetic (Trekking)</h4>
+                            <p class="offer-card__text">Idealny na długie wyprawy. Wyposażony w bagażnik i błotniki. Zasięg do 140 km.</p>
+                        </div>
+                    </div>
+                    <div class="offer-card">
+                        <img src="https://placehold.co/400x300/284B63/FFFFFF?text=Tabou+Mono" alt="Rower Tabou Mono" class="offer-card__img">
+                        <div class="offer-card__content">
+                            <h4 class="offer-card__title">Tabou Mono (Miejski)</h4>
+                            <p class="offer-card__text">Komfortowy rower z niską ramą, idealny do rekreacyjnej jazdy po okolicy. Zasięg do 110 km.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="section-subtitle">Kajaki i Akcesoria</h3>
+                <div class="grid grid--3-cols">
+                     <div class="offer-card">
+                        <img src="https://placehold.co/400x300/3C6E71/FFFFFF?text=Kajak+Solina" alt="Kajak Solina" class="offer-card__img">
+                        <div class="offer-card__content">
+                            <h4 class="offer-card__title">Kajak Solina (2+1)</h4>
+                            <p class="offer-card__text">Niezwykle stabilny i wytrzymały kajak dwuosobowy z dodatkowym miejscem dla dziecka. Idealny na rodzinne spływy.</p>
+                        </div>
+                    </div>
+                     <div class="offer-card">
+                        <img src="https://placehold.co/400x300/3C6E71/FFFFFF?text=Wios%C5%82a" alt="Wiosła" class="offer-card__img">
+                        <div class="offer-card__content">
+                            <h4 class="offer-card__title">Profesjonalne Wiosła</h4>
+                            <p class="offer-card__text">Lekkie i wytrzymałe wiosła asymetryczne, które zapewniają komfort i efektywność wiosłowania.</p>
+                        </div>
+                    </div>
+                     <div class="offer-card">
+                        <img src="https://placehold.co/400x300/3C6E71/FFFFFF?text=Kamizelki" alt="Kamizelki asekuracyjne" class="offer-card__img">
+                        <div class="offer-card__content">
+                            <h4 class="offer-card__title">Kamizelki Asekuracyjne</h4>
+                            <p class="offer-card__text">Certyfikowane kamizelki we wszystkich rozmiarach dla dorosłych i dzieci. Twoje bezpieczeństwo jest dla nas priorytetem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="section">
+            <div class="container">
+                <span class="subheading">Proste i jasne zasady</span>
+                <h2 class="section-title">Cennik</h2>
+                <div class="pricing-table">
+                    <div class="pricing-header">
+                        <div>Sprzęt</div>
+                        <div>1 Godzina</div>
+                        <div>3 Godziny</div>
+                        <div>Cały Dzień</div>
+                    </div>
+                    <div class="pricing-row">
+                        <div>Rower Elektryczny</div>
+                        <div>40 zł</div>
+                        <div>90 zł</div>
+                        <div>150 zł</div>
+                    </div>
+                    <div class="pricing-row">
+                        <div>Kajak Dwuosobowy</div>
+                        <div>30 zł</div>
+                        <div>70 zł</div>
+                        <div>120 zł</div>
+                    </div>
+                     <div class="pricing-row pricing-row--highlight">
+                        <div>Zestaw: 2x Rower + Kajak</div>
+                        <div>-</div>
+                        <div>-</div>
+                        <div>350 zł</div>
+                    </div>
+                </div>
+                 <p class="pricing-note">W cenie wynajmu kask, zapięcie (rowery) oraz kamizelki asekuracyjne (kajaki). Kaucja zwrotna: 100 zł za rower, 50 zł za kajak. <br> Chcesz wynająć na dłużej? <a href="#contact">Skontaktuj się z nami</a> po indywidualną ofertę.</p>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section section--bg-gray">
+             <div class="container">
+                <span class="subheading">Zaufali nam</span>
+                <h2 class="section-title">Co mówią nasi klienci?</h2>
                 <div class="grid grid--2-cols">
-                    <div>
-                        <p class="offer__infoText"><strong>§1 Postanowienia ogólne</strong><br>1. Wypożyczalnia sprzętu sportowego "Dworek Hetmański" jest integralną częścią obiektu i świadczy usługi zgodnie z niniejszym regulaminem.<br>2. Każdy klient wypożyczający sprzęt jest zobowiązany do zapoznania się z regulaminem i jego akceptacji.<br>3. Wypożyczenie sprzętu jest równoznaczne z akceptacją warunków regulaminu.</p>
-                        <p class="offer__infoText"><strong>§2 Warunki wypożyczenia</strong><br>1. Sprzęt wypożyczany jest osobom pełnoletnim, po okazaniu ważnego dokumentu tożsamości ze zdjęciem (dowód osobisty, paszport, prawo jazdy).<br>2. Osoby niepełnoletnie mogą korzystać ze sprzętu wyłącznie pod opieką osób dorosłych.<br>3. Warunkiem wypożyczenia sprzętu jest uiszczenie opłaty z góry, zgodnie z obowiązującym cennikiem, oraz wpłacenie kaucji zwrotnej.<br>4. Kaucja zwrotna wynosi 100 zł za rower elektryczny oraz 50 zł za kajak.</p>
+                    <div class="testimonial-card">
+                        <blockquote>
+                            "Sprzęt praktycznie nowy, wszystko super przygotowane. Trasy kajakowe, które nam polecono, były przepiękne i idealne dla rodziny. Na pewno wrócimy!"
+                        </blockquote>
+                        <cite>
+                            <img src="https://i.pravatar.cc/48?u=anna" alt="Avatar Anny">
+                            <span>Anna Kowalska</span>
+                        </cite>
                     </div>
-                    <div>
-                        <p class="offer__infoText"><strong>§3 Odpowiedzialność</strong><br>1. Klient ponosi pełną odpowiedzialność materialną za wypożyczony sprzęt oraz ewentualne szkody wyrządzone osobom trzecim.<br>2. W przypadku uszkodzenia, zniszczenia lub kradzieży sprzętu, klient zobowiązany jest do pokrycia kosztów naprawy lub zakupu nowego sprzętu, w wysokości wartości rynkowej.<br>3. Wypożyczalnia nie ponosi odpowiedzialności za wypadki i szkody powstałe w trakcie użytkowania sprzętu.</p>
-                        <p class="offer__infoText"><strong>§4 Zwrot sprzętu</strong><br>1. Klient zobowiązany jest do zwrotu sprzętu w terminie określonym w umowie.<br>2. Sprzęt powinien być zwrócony w stanie niepogorszonym, czysty i sprawny technicznie.<br>3. W przypadku zwrotu sprzętu po terminie, wypożyczalnia naliczy opłatę za każdą dodatkową godzinę, zgodnie z cennikiem.</p>
+                     <div class="testimonial-card">
+                        <blockquote>
+                            "Pełen profesjonalizm. Rowery elektryczne dały radę nawet na stromych podjazdach, a bateria spokojnie wystarczyła na cały dzień. Polecam z całego serca!"
+                        </blockquote>
+                        <cite>
+                            <img src="https://i.pravatar.cc/48?u=piotr" alt="Avatar Piotra">
+                            <span>Piotr Nowak</span>
+                        </cite>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT SECTION -->
-        <section id="contact" class="section section--bg-gray">
-            <div class="container grid grid--2-cols">
-                <div class="contact__info" data-aos="fade-right">
-                    <span class="subheading">Czekamy na Ciebie</span>
-                    <p>
-                        Masz pytania lub chcesz zarezerwować termin? Skontaktuj się z nami. Z przyjemnością opowiemy o szczegółach naszej oferty.
-                    </p>
-                    <ul class="contact__list">
-                        <li>
-                            <img src="./Assets/Icons/phone.svg" alt="Telefon">
-                            <a href="tel:+48512936500">+48 512-936-500</a>
-                        </li>
-                        <li>
-                            <img src="./Assets/Icons/message.svg" alt="Email">
-                            <a href="mailto:kontakt@dworekhetmanski.pl">kontakt@dworekhetmanski.pl</a>
-                        </li>
-                        <li>
-                            <img src="./Assets/Icons/fb_logo.svg" alt="Facebook">
-                            <a href="https://www.facebook.com/DworekHetmanskiMoniochy" target="_blank">Polub nas na Facebooku</a>
-                        </li>
-                    </ul>
-                     <p><strong>Adres:</strong> Moniochy 34, 26-903 Głowaczów</p>
-                </div>
-                <div class="contact__map" data-aos="fade-left" data-aos-delay="200">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.492633543487!2d21.93114231588669!3d51.073029979566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47225a6a4c6a2e7b%3A0x4f7e3b3e4b3!2sMoniochy%2034%2C%2024-300%20Opole%20Lubelskie!5e0!3m2!1spl!2spl!4v1678886655552!5m2!1spl!2spl"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+        <section id="contact" class="section cta-section">
+            <div class="container">
+                <h2 class="cta-title">Gotowy na przygodę?</h2>
+                <p class="cta-text">Nie zwlekaj! Sprzęt czeka. Skontaktuj się z nami, aby zarezerwować termin i cieszyć się aktywnym wypoczynkiem.</p>
+                <a href="tel:+48512936500" class="btn btn--primary btn--large">
+                    <i class="ph-phone-fill"></i> Zadzwoń i zarezerwuj: +48 512-936-500
+                </a>
             </div>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container footer__container">
             <div class="footer__credits">
                 &copy; <span id="year"></span> Dworek Hetmański. Wszelkie prawa zastrzeżone.
             </div>
-            <div class="footer__links">
+             <div class="footer__links">
+                <a href="#">Regulamin</a>
                 <a href="./Assets/polityka_prywatnosci.pdf" target="_blank">Polityka Prywatności</a>
             </div>
         </div>
     </footer>
 
-    <!-- SCROLL TO TOP BUTTON -->
-    <a href="#" class="scroll-to-top">
-        <img src="./Assets/Icons/arrowIcon2.svg" alt="Wróć na górę">
-    </a>
-
-    <!-- SCRIPTS -->
-    <script src='./src/lightbox-plus-jquery.js'></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="./src/main.js"></script>
+    <script>
+        // Simple script for sticky navbar and year
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
-
-
 </html>

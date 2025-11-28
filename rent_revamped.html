@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Wypożyczalnia - Dworek Hetmański</title>
+  <meta name="description" content="Wypożyczalnia sprzętu rekreacyjnego Dworek Hetmański — rowery elektryczne, kajaki, kamizelki. Szybka rezerwacja i profesjonalne wyposażenie.">
+  <meta property="og:title" content="Wypożyczalnia - Dworek Hetmański">
+  <meta property="og:description" content="Rowery elektryczne, kajaki, akcesoria. Rezerwuj online i odkryj najpiękniejsze trasy.">
+  <meta property="og:image" content="./Assets/Images/og-image.webp">
+  <link rel="icon" href="./Assets/Icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Minimal reset + embedded CSS for preview -->
+  <style>
+    :root{
+      --bg:#f7fbfb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent-1:linear-gradient(135deg,#0ea5a4 0%,#06b6d4 100%); /* teal/cyan */
+      --accent-2:#052f2f;
+      --glass: rgba(255,255,255,0.7);
+      --radius:14px;
+      --max:1200px;
+      --container-padding:24px;
+      --shadow: 0 8px 24px rgba(3,7,18,0.08);
+      --cta-shadow: 0 12px 30px rgba(6,182,212,0.18);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Segoe UI,Roboto,"Source Sans Pro",sans-serif;
+      background:var(--bg);
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      -webkit-tap-highlight-color:transparent;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 var(--container-padding)}
+
+    /* NAVBAR */
+    .navbar{position:fixed;left:0;right:0;top:0;z-index:60;backdrop-filter:saturate(120%) blur(6px);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .logo{font-family:'Playfair Display',serif;font-size:20px;color:var(--accent-2);font-weight:700}
+    .nav-links{display:flex;gap:18px;align-items:center}
+    .nav-links a{padding:8px 12px;border-radius:10px;font-weight:600;color:var(--muted)}
+    .nav-links a.cta{background:var(--accent-1);color:white;box-shadow:var(--cta-shadow)}
+    .hamburger{display:none}
+
+    /* HERO */
+    .hero{position:relative;height:78vh;min-height:520px;display:flex;align-items:center}
+    .hero__media{position:absolute;inset:0;overflow:hidden}
+    .hero__media video{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.05)}
+    .hero__overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(3,7,18,0.25), rgba(3,7,18,0.45));mix-blend-mode:multiply}
+    .hero__content{position:relative;z-index:10;max-width:1100px;margin:0 auto;padding:0 var(--container-padding);display:flex;gap:32px;align-items:center}
+    .hero__left{flex:1;color:white;padding:36px;border-radius:16px}
+    .kicker{display:inline-block;background:rgba(255,255,255,0.08);padding:8px 12px;border-radius:999px;font-weight:600;margin-bottom:16px}
+    h1.hero-title{font-family:'Playfair Display',serif;font-size:46px;line-height:1.02;margin:0 0 12px}
+    p.lead{margin:0 0 20px;font-size:18px;opacity:0.95}
+    .hero-cta{display:flex;gap:12px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;font-weight:700;border:0;cursor:pointer}
+    .btn-primary{background:var(--accent-1);color:white;box-shadow:var(--cta-shadow)}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.14);color:white}
+
+    .glass-card{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.04));border-radius:16px;padding:18px;backdrop-filter:blur(6px);box-shadow:0 8px 30px rgba(2,6,23,0.25);min-width:320px}
+
+    /* MAIN */
+    main{margin-top:76vh;padding-top:40px}
+    .section{padding:72px 0}
+    .grid{display:grid;gap:28px}
+    .grid--2{grid-template-columns:1fr 1fr}
+    .grid--3{grid-template-columns:repeat(3,1fr)}
+    .grid--4{grid-template-columns:repeat(4,1fr)}
+
+    /* Offer cards */
+    .offer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:18px}
+    .card{background:var(--card);border-radius:12px;padding:14px;box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden}
+    .card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+    .card h3{margin:12px 0 8px;font-size:18px}
+    .meta{font-size:13px;color:var(--muted);margin-bottom:12px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:#f1f5f9;color:#0f172a}
+
+    /* Booking sticky bar mobile */
+    .sticky-book{position:fixed;left:16px;right:16px;bottom:20px;z-index:70;display:none}
+    .sticky-book .btn{width:100%;justify-content:center;padding:14px}
+
+    /* Gallery masonry */
+    .masonry{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+    .masonry img{width:100%;height:160px;object-fit:cover;border-radius:8px;display:block}
+
+    /* Accordion for regulations */
+    .accordion{border-radius:12px;overflow:hidden}
+    .acc-item{background:var(--card);border-bottom:1px solid #eef2f6}
+    .acc-head{padding:14px 18px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+    .acc-body{padding:0 18px 18px;display:none;color:var(--muted);}
+
+    /* Footer */
+    footer{padding:32px 0;background:transparent}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .nav-links{display:none}
+      .hamburger{display:block}
+      .hero{height:60vh;min-height:420px}
+      .hero-title{font-size:34px}
+      .hero__left{padding:18px}
+      .sticky-book{display:block}
+      main{margin-top:60vh}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Dworek Hetmański</a>
+      <nav>
+        <div class="nav-links" role="navigation" aria-label="Główne menu">
+          <a href="#about">O nas</a>
+          <a href="#offer">Oferta</a>
+          <a href="#gallery">Galeria</a>
+          <a href="#contact">Kontakt</a>
+          <a class="cta" href="index.html">Dom Weselny</a>
+        </div>
+        <button class="hamburger" aria-label="Otwórz menu" onclick="toggleMobileMenu()">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Sekcja powitalna">
+    <div class="hero__media">
+      <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
+        <source src="./Assets/video2.mp4" type="video/mp4">
+      </video>
+      <div class="hero__overlay" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero__content container">
+      <div class="hero__left glass-card" data-aos="zoom-in">
+        <span class="kicker">Wypożyczalnia • Sprzęt rekreacyjny</span>
+        <h1 class="hero-title">Wypożycz sprzęt. Odkryj okolicę. Poczuj przygodę.</h1>
+        <p class="lead">Rowery elektryczne, kajaki i wyposażenie turystyczne. Szybka rezerwacja, serwis i bezpieczny sprzęt gotowy do akcji.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#offer">Rezerwuj teraz</a>
+          <a class="btn btn-ghost" href="#gallery">Zobacz galerię</a>
+        </div>
+      </div>
+
+      <aside class="glass-card" aria-label="Szybka rezerwacja">
+        <form id="quick-book" onsubmit="handleQuickBook(event)">
+          <label for="type" class="sr-only">Typ sprzętu</label>
+          <select id="type" name="type" aria-label="Wybierz rodzaj sprzętu" style="width:100%;padding:10px;border-radius:10px;border:1px solid #e6eef0;margin-bottom:10px">
+            <option value="e-bike">Rower elektryczny</option>
+            <option value="kajak">Kajak</option>
+            <option value="accessory">Akcesoria</option>
+          </select>
+          <div style="display:flex;gap:8px;margin-bottom:10px">
+            <input type="date" id="date" required style="flex:1;padding:10px;border-radius:10px;border:1px solid #e6eef0">
+            <input type="number" min="1" max="10" id="qty" value="1" required style="width:84px;padding:10px;border-radius:10px;border:1px solid #e6eef0">
+          </div>
+          <button class="btn btn-primary" type="submit" style="width:100%">Sprawdź dostępność</button>
+        </form>
+      </aside>
+    </div>
+  </section>
+
+  <main>
+    <!-- ABOUT / MAIN -->
+    <section class="section" id="about">
+      <div class="container grid grid--2" style="align-items:center;gap:42px">
+        <div>
+          <img loading="lazy" src="https://placehold.co/800x500?text=Krajobraz" alt="Krajobraz okolicy" style="width:100%;border-radius:12px;box-shadow:var(--shadow)">
+        </div>
+        <div>
+          <h2 style="font-family:'Playfair Display',serif;font-size:28px;margin:0 0 12px">Aktywny wypoczynek dla każdego</h2>
+          <p class="lead" style="margin-bottom:14px">Nasza wypożyczalnia oferuje sprzęt dopasowany do rodzin, par i zapalonych sportowców. Dbamy o bezpieczeństwo i komfort — regularny serwis, certyfikowane kamizelki i jasne zasady wypożyczenia.</p>
+          <ul style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:0;padding:0;list-style:none">
+            <li>✅ Nowoczesne e-rowery</li>
+            <li>✅ Stabilne kajaki dwuosobowe</li>
+            <li>✅ Profesjonalne wyposażenie</li>
+            <li>✅ Trasy i mapy rekomendowane</li>
+          </ul>
+          <div style="margin-top:18px;display:flex;gap:12px">
+            <a class="btn btn-primary" href="#offer">Sprawdź ofertę</a>
+            <a class="btn" href="#contact">Kontakt</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFER -->
+    <section class="section" id="offer" aria-labelledby="offer-title">
+      <div class="container">
+        <h2 id="offer-title" style="font-size:24px;margin-bottom:8px">Nasza oferta</h2>
+        <p class="meta">Rowery elektryczne • Kajaki • Akcesoria</p>
+
+        <h3 style="margin-top:28px">Rowery Elektryczne</h3>
+        <div class="offer-grid" role="list">
+          <!-- Card 1 -->
+          <article class="card" role="listitem" aria-label="Tabou Wizz">
+            <img loading="lazy" src="https://placehold.co/800x500?text=Tabou+Wizz" alt="Tabou Wizz">
+            <h3>Tabou Wizz <small style="color:var(--muted);font-weight:600">(2 szt.)</small></h3>
+            <div class="meta">Uniwersalny rower crossowy ze wspomaganiem.</div>
+            <div class="tags">
+              <span class="tag">Zasięg: 120 km</span>
+              <span class="tag">Silnik: Bafang M200</span>
+              <span class="tag">2 szt.</span>
+              <a class="btn" href="#" style="margin-left:auto;padding:8px 10px;background:linear-gradient(90deg,#e6f7f7,#d9fbff);border-radius:8px">Szczegóły</a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card" role="listitem" aria-label="Tabou Blade">
+            <img loading="lazy" src="https://placehold.co/800x500?text=Tabou+Blade" alt="Tabou Blade">
+            <h3>Tabou Blade <small style="color:var(--muted);font-weight:600">(2 szt.)</small></h3>
+            <div class="meta">Rower górski (MTB) z mocnym silnikiem.</div>
+            <div class="tags">
+              <span class="tag">Zasięg: 130 km</span>
+              <span class="tag">Silnik: ANANDA M100</span>
+              <a class="btn" href="#" style="margin-left:auto;padding:8px 10px;background:linear-gradient(90deg,#fff6e6,#fff1e0);border-radius:8px">Szczegóły</a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card" role="listitem" aria-label="Tabou Kinetic">
+            <img loading="lazy" src="https://placehold.co/800x500?text=Tabou+Kinetic" alt="Tabou Kinetic">
+            <h3>Tabou Kinetic <small style="color:var(--muted);font-weight:600">(3 szt.)</small></h3>
+            <div class="meta">Rower trekkingowy, idealny na całodniowe wyprawy.</div>
+            <div class="tags">
+              <span class="tag">Zasięg: 140 km</span>
+              <span class="tag">Silnik: Bafang M420</span>
+              <a class="btn" href="#" style="margin-left:auto;padding:8px 10px;background:linear-gradient(90deg,#eef7ff,#f3f9ff);border-radius:8px">Szczegóły</a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card" role="listitem" aria-label="Tabou Mono">
+            <img loading="lazy" src="https://placehold.co/800x500?text=Tabou+Mono" alt="Tabou Mono">
+            <h3>Tabou Mono <small style="color:var(--muted);font-weight:600">(2 szt.)</small></h3>
+            <div class="meta">Miejski rower z niską ramą.</div>
+            <div class="tags">
+              <span class="tag">Zasięg: 110 km</span>
+              <span class="tag">Silnik: Bafang G020</span>
+              <a class="btn" href="#" style="margin-left:auto;padding:8px 10px;background:linear-gradient(90deg,#fffaf1,#fff5e6);border-radius:8px">Szczegóły</a>
+            </div>
+          </article>
+        </div>
+
+        <h3 style="margin-top:34px">Kajaki i akcesoria</h3>
+        <div class="offer-grid">
+          <article class="card" aria-label="Kajaki Solina">
+            <img loading="lazy" src="https://placehold.co/800x500?text=Kajak+Solina" alt="Kajak Solina">
+            <h3>Kajaki Solina HDPE <small style="color:var(--muted);font-weight:600">(15 szt.)</small></h3>
+            <div class="meta">Wytrzymałe kajaki dwuosobowe.</div>
+            <div class="tags">
+              <span class="tag">Długość: 4,80 m</span>
+              <span class="tag">Wyporność: 340 kg</span>
+              <a class="btn" href="#" style="margin-left:auto;padding:8px 10px;background:linear-gradient(90deg,#e6fff2,#eafff7);border-radius:8px">Szczegóły</a>
+            </div>
+          </article>
+          <article class="card" aria-label="Wiosła Egalis">
+            <img loading="lazy" src="https://placehold.co/800x500?text=Wiosla" alt="Wiosła Egalis">
+            <h3>Wiosła Egalis</h3>
+            <div class="meta">Lekkie i efektywne wiosła.</div>
+            <div class="tags">
+              <span class="tag">Asymetryczne pióra</span>
+              <a class="btn" href="#" style="margin-left:auto;padding:8px 10px;background:linear-gradient(90deg,#fff6f6,#fff1f1);border-radius:8px">Szczegóły</a>
+            </div>
+          </article>
+          <article class="card" aria-label="Kamizelki">
+            <img loading="lazy" src="https://placehold.co/800x500?text=Kamizelki" alt="Kamizelki asekuracyjne">
+            <h3>Kamizelki asekuracyjne</h3>
+            <div class="meta">Certyfikowane kamizelki dla dorosłych i dzieci.</div>
+            <div class="tags">
+              <span class="tag">Rozmiary: S-XL</span>
+              <a class="btn" href="#" style="margin-left:auto;padding:8px 10px;background:linear-gradient(90deg,#f0fffb,#eafff7);border-radius:8px">Szczegóły</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Pricing teaser -->
+        <div style="margin-top:28px;padding:16px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#fbffff);box-shadow:var(--shadow)">
+          <strong>Cennik (przykład):</strong>
+          <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+            <div style="flex:1;min-width:180px;padding:12px;border-radius:10px;background:#f7fbfb">Rower elektryczny – 1h: 60 zł • dzień: 250 zł</div>
+            <div style="flex:1;min-width:180px;padding:12px;border-radius:10px;background:#f7fbfb">Kajak – 3h: 80 zł • dzień: 150 zł</div>
+            <div style="flex:1;min-width:180px;padding:12px;border-radius:10px;background:#f7fbfb">Kamizelka – 1 szt.: 10 zł</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <h2 style="font-size:22px">Złapane w kadrze</h2>
+        <p class="meta">Kilka zdjęć z tras i naszych sprzętów</p>
+        <div class="masonry" style="margin-top:12px">
+          <!-- images kept as original folder links where possible -->
+          <img loading="lazy" src="./Assets/Photos/miniatures/IMG_7772.webp" alt="Gal 1">
+          <img loading="lazy" src="./Assets/Photos/miniatures/IMG_7774.webp" alt="Gal 2">
+          <img loading="lazy" src="./Assets/Photos/miniatures/IMG_7775.webp" alt="Gal 3">
+          <img loading="lazy" src="./Assets/Photos/miniatures/IMG_7776.webp" alt="Gal 4">
+          <img loading="lazy" src="./Assets/Photos/miniatures/IMG_7781.webp" alt="Gal 5">
+          <img loading="lazy" src="./Assets/Photos/miniatures/IMG_7783.webp" alt="Gal 6">
+          <img loading="lazy" src="./Assets/Photos/miniatures/7.webp" alt="Gal 7">
+          <img loading="lazy" src="./Assets/Photos/miniatures/1.webp" alt="Gal 8">
+        </div>
+      </div>
+    </section>
+
+    <!-- REGULATIONS - ACCORDION -->
+    <section class="section">
+      <div class="container">
+        <h2 style="font-size:22px">Regulamin wypożyczalni</h2>
+        <div class="accordion" id="rules" style="margin-top:12px">
+          <div class="acc-item">
+            <button class="acc-head" aria-expanded="false" onclick="toggleAcc(this)">
+              <span>§1 Postanowienia ogólne</span>
+              <span aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Wypożyczalnia sprzętu sportowego "Dworek Hetmański" jest integralną częścią obiektu. Każdy klient zobowiązany jest do akceptacji regulaminu.</p>
+            </div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-head" aria-expanded="false" onclick="toggleAcc(this)">
+              <span>§2 Warunki wypożyczenia</span>
+              <span aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Sprzęt wypożyczamy osobom pełnoletnim po okazaniu dokumentu tożsamości. Kaucja: rower 100 zł, kajak 50 zł.</p>
+            </div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-head" aria-expanded="false" onclick="toggleAcc(this)">
+              <span>§3 Odpowiedzialność</span>
+              <span aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Klient ponosi odpowiedzialność materialną za wypożyczony sprzęt. Wypożyczalnia nie odpowiada za wypadki podczas użytkowania.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--bg-gray">
+      <div class="container grid grid--2" style="align-items:start">
+        <div>
+          <h2 style="font-size:22px">Czekamy na Ciebie</h2>
+          <p>Masz pytania lub chcesz zarezerwować termin? Skontaktuj się z nami.</p>
+          <ul style="list-style:none;padding:0;margin:12px 0;line-height:1.6">
+            <li>📞 <a href="tel:+48512936500">+48 512-936-500</a></li>
+            <li>✉️ <a href="mailto:kontakt@dworekhetmanski.pl">kontakt@dworekhetmanski.pl</a></li>
+            <li>📍 Moniochy 34, 26-903 Głowaczów</li>
+          </ul>
+        </div>
+        <div style="height:260px;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.492633543487!2d21.93114231588669!3d51.073029979566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47225a6a4c6a2e7b%3A0x4f7e3b3e4b3!2sMoniochy%2034%2C%2024-300%20Opole%20Lubelskie!5e0!3m2!1spl!2spl!4v1678886655552!5m2!1spl!2spl"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div>&copy; <span id="year"></span> Dworek Hetmański. Wszelkie prawa zastrzeżone.</div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <a href="./Assets/polityka_prywatnosci.pdf" target="_blank">Polityka Prywatności</a>
+        <a href="#contact">Kontakt</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky booking -->
+  <div class="sticky-book">
+    <a class="btn btn-primary" href="#offer">Rezerwuj teraz</a>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    // small helpers: year, accordion, mobile menu, quick-book demo
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function toggleAcc(btn){
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      const body = btn.nextElementSibling;
+      if(!expanded){ body.style.display = 'block'; setTimeout(()=>body.style.maxHeight = body.scrollHeight+'px',10);} else { body.style.maxHeight='0'; setTimeout(()=>body.style.display='none',300)}
+    }
+
+    function toggleMobileMenu(){
+      const nl = document.querySelector('.nav-links');
+      if(nl.style.display==='flex'){ nl.style.display='none'; } else { nl.style.display='flex'; nl.style.flexDirection='column'; nl.style.position='absolute'; nl.style.right='16px'; nl.style.top='66px'; nl.style.background='white'; nl.style.padding='12px'; nl.style.borderRadius='12px'; nl.style.boxShadow='var(--shadow)'; }
+    }
+
+    function handleQuickBook(e){
+      e.preventDefault();
+      const type = document.getElementById('type').value;
+      const date = document.getElementById('date').value;
+      const qty = document.getElementById('qty').value;
+      if(!date){ alert('Wybierz datę'); return }
+      // demo behaviour: redirect to contact with query string (in real app: call API)
+      const q = `?type=${encodeURIComponent(type)}&date=${encodeURIComponent(date)}&qty=${encodeURIComponent(qty)}`;
+      window.location.href = '#contact'+q;
+    }
+
+    // small AOS-like entrance (no external lib)
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const els = document.querySelectorAll('[data-aos]');
+      els.forEach(el=>{ el.style.opacity=0; el.style.transform='translateY(10px)'; setTimeout(()=>{ el.style.transition='all 700ms cubic-bezier(.2,.8,.2,1)'; el.style.opacity=1; el.style.transform='translateY(0)'; }, 200); });
+    });
+  </script>
+</body>
+</html>
