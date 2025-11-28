@@ -3,113 +3,73 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta property="og:image" content="./Assets/Photos/default/photo0.jpg">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Wypożyczalnia rowerów i kajaków w Dworku Hetmańskim w Moniochach.">
-    <link rel="stylesheet" href="./css/main.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title>Wypożyczalnia - Dworek Hetmański</title>
-    <link rel="icon" href="./Assets/Icons/favicon.svg">
+    <meta name="description" content="Dworek Hetmański w Moniochach. Organizacja wesel, chrzcin, spotkań firmowych i konferencji. Stworzymy dla Ciebie niezapomniane chwile.">
+    <meta property="og:image" content="./Assets/Images/og-image.webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Libraries CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/lightbox.min.css">
-	
-	 <style>
-        .colaborationItem {
-            margin: 0.5rem 0;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
-            max-width: 100%;
-            border-radius: 4px;
-            overflow: hidden;
-        }
 
-        .colaborationItem__img {
-            max-width: 100%;
-        }
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/main.css">
 
-    </style>
+    <!-- Favicon -->
+    <link rel="icon" href="./Assets/Icons/favicon.svg">
 </head>
 
 <body>
-    <div class="wrapper">
-        <header>
-		<section class="menu-screen">
-                <ul class="menu-screen__list">
-                    <li class="menu-screen__listItem" data-direction="main" onclick="moveScreen(event)">
-                        O nas
-                    </li>
-                    <li class="menu-screen__listItem" data-direction="offer" onclick="moveScreen(event)">
-                        Oferta
-                    </li>
-                    <li class="menu-screen__listItem" data-direction="gallery" onclick="moveScreen(event)">
-                        Galeria
-                    </li>
-                    <li class="menu-screen__listItem" data-direction="contact" onclick="moveScreen(event)">
-                        Kontakt
-                    </li>
-                    <li class="menu-screen__listItem">
-					  <a href="./index.html" class="menu-screen__link">Dom Weselny</a>
-					</li>
 
-                </ul>
-            </section>
-            <section class="menu-hamburger" id="hamburger">
-                <div class="hamburger">
-                    <div class="hamburger__item"></div>
-                    <div class="hamburger__item hamburger__item--1"></div>
-                    <div class="hamburger__item hamburger__item--2"></div>
+    <!-- HEADER & HERO SECTION -->
+    <header class="hero">
+        <div class="hero__video-container">
+            <video class="hero__video" autoplay muted loop playsinline>
+                <source src="./Assets/video2.mp4" type="video/mp4">
+            </video>
+            <div class="hero__overlay"></div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container navbar__container">
+                <a href="#" class="navbar__logo">Dworek Hetmański</a>
+                <div class="navbar__menu-button">
+                    <div class="navbar__menu-icon"></div>
                 </div>
-            </section>
-            <section class="section movie-overlay">
-                <div class="section movie-overlay movie-overlay--opacity"></div>
-                <video class="movie-overlay__video" autoplay muted loop id="myVideo">
-                    <source src="./Assets/video2.mp4" type="video/mp4">
-                </video>
-                <div class="movie-overlay__titleContainer">
-                    <h1 class="movie-overlay__title">
-                        <span class="movie-overlay__big-letter">W</span>ypożyczalnia
-                        <span class="movie-overlay__big-letter">S</span>przętu
-                    </h1>
-                </div>
-                <div class="movie-overlay__quoteContainer">
-                    <p class="movie-overlay__quote">
-                        Odkryj
-                        <br>
-                        piękno okolicy
-                    </p>
-                </div>
-				  <div class="movie-overlay__scrollContainer" id="scrollBtn">
-                    <div class="movie-overlay__scroll">
-                        <div class="movie-overlay__scrollItem"></div>
-                    </div>
-                    <p class="movie-overlay__scrollTxt">
-                        Przewiń
-                    </p>
-                </div>
-            </section>
-            <section class="section movie">
-            </section>
-        </header>
-        <nav class="mainMenu">
-            <div class="con mainMenu__con">
-                <div class="mainMenu__logo">
-                    <a href="index.html"><img loading="lazy" class="mainMenu__img" src="./Assets/Images/kkk.png" alt="logo"></a>
-                </div>
-                <ul class="menu">
-                    <li class="menu__item" data-direction="main" onclick="moveScreen(event)">O nas</li>
-                    <li class="menu__item" data-direction="offer" onclick="moveScreen(event)">Oferta</li>
-                    <li class="menu__item" data-direction="gallery" onclick="moveScreen(event)">Galeria</li>
-                    <li class="menu__item" data-direction="contact" onclick="moveScreen(event)">Kontakt</li>
-                    <li class="menu__item" data-direction="./index.html" onclick="moveScreen(event)">Dom Weselny</li>
+                <ul class="navbar__links">
+                    <li><a href="#about" class="navbar__link">O nas</a></li>
+                    <li><a href="#offer" class="navbar__link">Oferta</a></li>
+                    <li><a href="#gallery" class="navbar__link">Galeria</a></li>
+                    <li><a href="#contact" class="navbar__link">Kontakt</a></li>
+                    <li><a href="index.html" class="navbar__link navbar__link--button">Dom Weselny</a></li>
                 </ul>
             </div>
         </nav>
-        <main>
-            <section class="section main" id="main">
+
+        <div class="hero__content">
+            <h1 class="hero__title" data-aos="fade-up">
+                <span class="hero__title--big-letter">W</span>ypożyczalnia
+                <span class="hero__title--big-letter">S</span>przętu
+            </h1>
+            <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="200">Odkryj piękno okolicy</p>
+            <a href="#about" class="hero__scroll-down">
+                <p>Odkryj</p>
+                <img src="./Assets/Icons/arrowIcon2.svg" alt="Przewiń w dół">
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <section class="section main" id="main">
                 <div class="con main__con">
                     <div class="main__element">
                         <div class="main__imgBorder">
@@ -133,6 +93,7 @@
                     </div>
                 </div>
             </section>
+
             <section class="offer__bgc">
                 <div class="offer__bgc--opacity"></div>
                 <h2 class="offer__h2">Nasza Oferta</h2>
@@ -214,100 +175,136 @@
                     </span>
                 </div>
             </section>
-            <section class="section gallery">
-                <h2 class="gallery__h2">Galeria</h2>
-                <div class="con gallery__con">
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo28.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo28.jpg" alt="photo" />
+
+        <!-- GALLERY SECTION -->
+        <section id="gallery" class="section">
+            <div class="container">
+                <span class="subheading" data-aos="fade-up">Złapane w kadrze</span>
+                               <div class="gallery__grid" data-aos="fade-up" data-aos-delay="200">
+					<a href="./Assets/Photos/default/7.webp" data-lightbox="gallery" class="gallery__item">
+                        <img src="./Assets/Photos/miniatures/7.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
                     </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo29.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo29.jpg" alt="photo" />
+					 <a href="./Assets/Photos/default/1.webp" data-lightbox="gallery" class="gallery__item">
+                        <img src="./Assets/Photos/miniatures/1.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
                     </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo30.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo30.jpg" alt="photo" />
+					 <a href="./Assets/Photos/default/8.webp" data-lightbox="gallery" class="gallery__item">
+                        <img src="./Assets/Photos/miniatures/8.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
                     </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo31.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo31.jpg" alt="photo" />
+					 <a href="./Assets/Photos/default/9.webp" data-lightbox="gallery" class="gallery__item">
+                        <img src="./Assets/Photos/miniatures/9.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
                     </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo32.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo32.jpg" alt="photo" />
+                    <a href="./Assets/Photos/default/IMG_7772.webp" data-lightbox="gallery" class="gallery__item">
+                        <img src="./Assets/Photos/miniatures/IMG_7772.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
                     </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo33.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo33.jpg" alt="photo" />
+                    <a href="./Assets/Photos/default/IMG_7774.webp" data-lightbox="gallery" class="gallery__item">
+                        <img src="./Assets/Photos/miniatures/IMG_7774.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
                     </a>
-					 <button class="gallery__showMore" id="galleryBtn">
-                        Pokaż więcej
-                    </button>
+                    <a href="./Assets/Photos/default/IMG_7775.webp" data-lightbox="gallery" class="gallery__item">
+                        <img src="./Assets/Photos/miniatures/IMG_7775.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
+                    </a>
+                    <a href="./Assets/Photos/default/IMG_7776.webp" data-lightbox="gallery" class="gallery__item">
+                        <img src="./Assets/Photos/miniatures/IMG_7776.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
+                    </a>
+                    <a href="./Assets/Photos/default/IMG_7781.webp" data-lightbox="gallery" class="gallery__item gallery__item--large">
+                        <img src="./Assets/Photos/miniatures/IMG_7781.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
+                    </a>
+                    <a href="./Assets/Photos/default/IMG_7783.webp" data-lightbox="gallery" class="gallery__item">
+                        <img src="./Assets/Photos/miniatures/IMG_7783.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
+                    </a>
+                    <a href="./Assets/Photos/default/IMG_7787.webp" data-lightbox="gallery" class="gallery__item">
+                        <img src="./Assets/Photos/miniatures/IMG_7787.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
+                    </a>
+                     <a href="./Assets/Photos/default/IMG_7791.webp" data-lightbox="gallery" class="gallery__item">
+                        <img src="./Assets/Photos/miniatures/IMG_7791.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
+                    </a>
+                    <a href="./Assets/Photos/default/IMG_7793.webp" data-lightbox="gallery" class="gallery__item">
+                        <img src="./Assets/Photos/miniatures/IMG_7793.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
+                    </a>
+					
+					 <a href="./Assets/Photos/default/2.webp" data-lightbox="gallery" class="gallery__item">
+                        <img src="./Assets/Photos/miniatures/2.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
+                    </a>
+					 <a href="./Assets/Photos/default/3.webp" data-lightbox="gallery" class="gallery__item">
+                        <img src="./Assets/Photos/miniatures/3.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
+                    </a>
+					 <a href="./Assets/Photos/default/5.webp" data-lightbox="gallery" class="gallery__item">
+                        <img src="./Assets/Photos/miniatures/5.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
+                    </a>
+					 <a href="./Assets/Photos/default/6.webp" data-lightbox="gallery" class="gallery__item">
+                        <img src="./Assets/Photos/miniatures/6.webp" alt="Zdjęcie z galerii Dworku Hetmańskiego" class="gallery__img">
+                    </a>
+					
                 </div>
-            </section>
-            <section class="section contact" id="contact">
-                <div class="con contact__con">
-                     <h2 class="contact__title">Zapraszamy do kontaktu</h2>
-                    <div class="contact__item contact__item--left">
-                        <p class="contact__text">Moniochy 34</p>
-                        <p class="contact__text">26-903 Głowaczów</p>
-                        <a href="tel:+48 512-936-500" class="contact__text contact__text--pointer">
-                            <img loading="lazy" src="./Assets/Icons/phone.svg" alt="phoneNumber" class="contact__img">
-                            +48 512-936-500
-                        </a>
-                        <a href="mailto:kontakt@dworekhetmanski.pl" class="contact__text contact__text--pointer">
-                            <img loading="lazy" src="./Assets/Icons/message.svg" alt="email" class="contact__img">
-                            kontakt@dworekhetmanski.pl
-                        </a>
-                        <a href="https://www.facebook.com/DworekHetmanskiMoniochy" target='_blank'
-                            class="contact__text contact__text--pointer">
-                            <img loading="lazy" src="./Assets/Icons/fb_logo.svg" alt="email" class="contact__img">
-                            Polub nas
-                        </a>
-                    </div>
-                    <div class="contact__item contact__item--right">
-                     <iframe 
-						 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2182.3913353406097!2d21.29218793454647!3d51.65042620809303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4718ee59c6a29949%3A0x2f10a4116c3c408a!2sMoniochy%2034A%2C%2026-903!5e0!3m2!1spl!2spl!4v1755858104742!5m2!1spl!2spl"
-						 width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-					 </iframe>
-                    </div>
-					<br/>
-                    <div class="contact__item contact__item--left">
+            </div>
+        </section>
+
+
+
+  <div class="contact__item contact__item--left">
                         <h2 class="contact__title">Regulamin Wypożyczalni</h2>
                         <p class="offer__infoText"><strong>§1 Postanowienia ogólne</strong><br>1. Wypożyczalnia sprzętu sportowego "Dworek Hetmański" jest integralną częścią obiektu i świadczy usługi zgodnie z niniejszym regulaminem.<br>2. Każdy klient wypożyczający sprzęt jest zobowiązany do zapoznania się z regulaminem i jego akceptacji.<br>3. Wypożyczenie sprzętu jest równoznaczne z akceptacją warunków regulaminu.</p>
                         <p class="offer__infoText"><strong>§2 Warunki wypożyczenia</strong><br>1. Sprzęt wypożyczany jest osobom pełnoletnim, po okazaniu ważnego dokumentu tożsamości ze zdjęciem (dowód osobisty, paszport, prawo jazdy).<br>2. Osoby niepełnoletnie mogą korzystać ze sprzętu wyłącznie pod opieką osób dorosłych.<br>3. Warunkiem wypożyczenia sprzętu jest uiszczenie opłaty z góry, zgodnie z obowiązującym cennikiem, oraz wpłacenie kaucji zwrotnej.<br>4. Kaucja zwrotna wynosi 100 zł za rower elektryczny oraz 50 zł za kajak.</p>
                         <p class="offer__infoText"><strong>§3 Odpowiedzialność</strong><br>1. Klient ponosi pełną odpowiedzialność materialną za wypożyczony sprzęt oraz ewentualne szkody wyrządzone osobom trzecim.<br>2. W przypadku uszkodzenia, zniszczenia lub kradzieży sprzętu, klient zobowiązany jest do pokrycia kosztów naprawy lub zakupu nowego sprzętu, w wysokości wartości rynkowej.<br>3. Wypożyczalnia nie ponosi odpowiedzialności za wypadki i szkody powstałe w trakcie użytkowania sprzętu.</p>
                         <p class="offer__infoText"><strong>§4 Zwrot sprzętu</strong><br>1. Klient zobowiązany jest do zwrotu sprzętu w terminie określonym w umowie.<br>2. Sprzęt powinien być zwrócony w stanie niepogorszonym, czysty i sprawny technicznie.<br>3. W przypadku zwrotu sprzętu po terminie, wypożyczalnia naliczy opłatę za każdą dodatkową godzinę, zgodnie z cennikiem.</p>
                     </div>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section section--bg-gray">
+            <div class="container grid grid--2-cols">
+                <div class="contact__info" data-aos="fade-right">
+                    <span class="subheading">Czekamy na Ciebie</span>
+                    <p>
+                        Masz pytania lub chcesz zarezerwować termin? Skontaktuj się z nami. Z przyjemnością opowiemy o szczegółach naszej oferty.
+                    </p>
+                    <ul class="contact__list">
+                        <li>
+                            <img src="./Assets/Icons/phone.svg" alt="Telefon">
+                            <a href="tel:+48512936500">+48 512-936-500</a>
+                        </li>
+                        <li>
+                            <img src="./Assets/Icons/message.svg" alt="Email">
+                            <a href="mailto:kontakt@dworekhetmanski.pl">kontakt@dworekhetmanski.pl</a>
+                        </li>
+                        <li>
+                            <img src="./Assets/Icons/fb_logo.svg" alt="Facebook">
+                            <a href="https://www.facebook.com/DworekHetmanskiMoniochy" target="_blank">Polub nas na Facebooku</a>
+                        </li>
+                    </ul>
+                     <p><strong>Adres:</strong> Moniochy 34, 26-903 Głowaczów</p>
                 </div>
-            </section>
-        </main>
-        <footer class="footer">
-            <div class="con footer__con">
-                <a class="footer__item" href="./Assets/polityka_prywatnosci.pdf" target="_blank">
-                    Polityka prywatności
-                </a>
-                <a class="footer__item" href="tel:+48 512-936-500" target="_blank">
-                    &copy Dworek Hetmański
-                </a>
-                <a class="footer__item" href="https://addpattern.it/"
-                    target="_blank">
-                    AddPattern
-                </a>
+                <div class="contact__map" data-aos="fade-left" data-aos-delay="200">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.492633543487!2d21.93114231588669!3d51.073029979566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47225a6a4c6a2e7b%3A0x4f7e3b3e4b3!2sMoniochy%2034%2C%2024-300%20Opole%20Lubelskie!5e0!3m2!1spl!2spl!4v1678886655552!5m2!1spl!2spl"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
-        </footer>
-        <div class="upBtn"><img loading="lazy" src="./Assets/Icons/arrowIcon2.svg" alt="arrowIcon" class="upBtn__img">
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__credits">
+                &copy; <span id="year"></span> Dworek Hetmański. Wszelkie prawa zastrzeżone.
+            </div>
+            <div class="footer__links">
+                <a href="./Assets/polityka_prywatnosci.pdf" target="_blank">Polityka Prywatności</a>
+            </div>
         </div>
-    </div>
+    </footer>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <a href="#" class="scroll-to-top">
+        <img src="./Assets/Icons/arrowIcon2.svg" alt="Wróć na górę">
+    </a>
+
+    <!-- SCRIPTS -->
     <script src='./src/lightbox-plus-jquery.js'></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./src/main.js"></script>
 </body>
+
 
 </html>
