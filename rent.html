@@ -21,6 +21,7 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/rent.css">
 
     <!-- Favicon -->
     <link rel="icon" href="./Assets/Icons/favicon.svg">
@@ -70,7 +71,7 @@
     <main>
 
         <section class="section main" id="main">
-                <div class="con main__con">
+                <div class="container grid grid--2-cols grid--centered">
                     <div class="main__element">
                         <div class="main__imgBorder">
                             <img loading="lazy" src="https://placehold.co/600x400?text=Krajobraz" alt="Krajobraz" class="main__img">
@@ -100,8 +101,9 @@
                 <h2 class="offer__h2 offer__h2--second">Rowery i Kajaki</h2>
             </section>
             <section class="section offer" id="offer">
+				<div class="container">
                 <h2 class="gallery__h2__rent">Rowery Elektryczne</h2>
-                <div class="con offer__con">
+                <div class="grid grid--4-cols">
                     <span class="offer__item">
                         <div class="offer__element">
                             <img loading="lazy" src="https://placehold.co/400x300?text=Tabou+Wizz" alt="Tabou Wizz" class="offer__elementImg">
@@ -144,8 +146,8 @@
                     </span>
                 </div>
                 <h2 class="gallery__h2__rent">Kajaki</h2>
-                <div class="con offer__con">
-                    <span class="offer__item">
+                <div class="grid grid--4-cols">
+                    <span class="offer-card">
                         <div class="offer__element">
                             <img loading="lazy" src="https://placehold.co/400x300?text=Kajak+Solina" alt="Kajak Solina" class="offer__elementImg">
                             <div class="offer__info">
@@ -155,7 +157,7 @@
                             </div>
                         </div>
                     </span>
-                    <span class="offer__item">
+                    <span class="offer-card">
                         <div class="offer__element">
                             <img loading="lazy" src="https://placehold.co/400x300?text=Wios%C5%82a+Egalis" alt="Wiosła Egalis" class="offer__elementImg">
                             <div class="offer__info">
@@ -164,7 +166,7 @@
                             </div>
                         </div>
                     </span>
-                    <span class="offer__item">
+                    <span class="offer-card">
                         <div class="offer__element">
                             <img loading="lazy" src="https://placehold.co/400x300?text=Kamizelki" alt="Kamizelki asekuracyjne" class="offer__elementImg">
                             <div class="offer__info">
@@ -174,6 +176,7 @@
                         </div>
                     </span>
                 </div>
+				</div>
             </section>
 
         <!-- GALLERY SECTION -->
@@ -240,13 +243,21 @@
 
 
 
-  <div class="contact__item contact__item--left">
-                        <h2 class="contact__title">Regulamin Wypożyczalni</h2>
+        <section class="section">
+            <div class="container">
+                <h2 class="subheading">Regulamin Wypożyczalni</h2>
+                <div class="grid grid--2-cols">
+                    <div>
                         <p class="offer__infoText"><strong>§1 Postanowienia ogólne</strong><br>1. Wypożyczalnia sprzętu sportowego "Dworek Hetmański" jest integralną częścią obiektu i świadczy usługi zgodnie z niniejszym regulaminem.<br>2. Każdy klient wypożyczający sprzęt jest zobowiązany do zapoznania się z regulaminem i jego akceptacji.<br>3. Wypożyczenie sprzętu jest równoznaczne z akceptacją warunków regulaminu.</p>
                         <p class="offer__infoText"><strong>§2 Warunki wypożyczenia</strong><br>1. Sprzęt wypożyczany jest osobom pełnoletnim, po okazaniu ważnego dokumentu tożsamości ze zdjęciem (dowód osobisty, paszport, prawo jazdy).<br>2. Osoby niepełnoletnie mogą korzystać ze sprzętu wyłącznie pod opieką osób dorosłych.<br>3. Warunkiem wypożyczenia sprzętu jest uiszczenie opłaty z góry, zgodnie z obowiązującym cennikiem, oraz wpłacenie kaucji zwrotnej.<br>4. Kaucja zwrotna wynosi 100 zł za rower elektryczny oraz 50 zł za kajak.</p>
+                    </div>
+                    <div>
                         <p class="offer__infoText"><strong>§3 Odpowiedzialność</strong><br>1. Klient ponosi pełną odpowiedzialność materialną za wypożyczony sprzęt oraz ewentualne szkody wyrządzone osobom trzecim.<br>2. W przypadku uszkodzenia, zniszczenia lub kradzieży sprzętu, klient zobowiązany jest do pokrycia kosztów naprawy lub zakupu nowego sprzętu, w wysokości wartości rynkowej.<br>3. Wypożyczalnia nie ponosi odpowiedzialności za wypadki i szkody powstałe w trakcie użytkowania sprzętu.</p>
                         <p class="offer__infoText"><strong>§4 Zwrot sprzętu</strong><br>1. Klient zobowiązany jest do zwrotu sprzętu w terminie określonym w umowie.<br>2. Sprzęt powinien być zwrócony w stanie niepogorszonym, czysty i sprawny technicznie.<br>3. W przypadku zwrotu sprzętu po terminie, wypożyczalnia naliczy opłatę za każdą dodatkową godzinę, zgodnie z cennikiem.</p>
                     </div>
+                </div>
+            </div>
+        </section>
 
         <!-- CONTACT SECTION -->
         <section id="contact" class="section section--bg-gray">
