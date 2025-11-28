@@ -277,6 +277,18 @@ body {
     color: var(--white-color);
 }
 
+.footer__partner img {
+    height: 40px; /* Fixed height for subtlety */
+    filter: grayscale(100%); /* Make it grayscale */
+    opacity: 0.7; /* Reduce opacity */
+    transition: all 0.3s ease;
+}
+
+.footer__partner img:hover {
+    filter: grayscale(0%); /* Full color on hover */
+    opacity: 1; /* Full opacity on hover */
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .grid--4-cols, .grid--3-cols {
