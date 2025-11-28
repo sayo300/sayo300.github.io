@@ -170,39 +170,42 @@ body {
 
 /* Pricing Table */
 .pricing-table {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    border-collapse: collapse;
     background-color: var(--white-color);
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow);
     border: 1px solid var(--accent-color);
+    margin-bottom: 2rem;
 }
-.pricing-table > div {
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid var(--accent-color);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    align-items: center;
-}
-.pricing-table > div > div {
+
+.pricing-table th,
+.pricing-table td {
+    padding: 1.2rem 1.5rem;
     text-align: center;
+    border-bottom: 1px solid var(--accent-color);
 }
-.pricing-header {
+
+.pricing-table thead th {
     background-color: var(--primary-color);
     color: var(--white-color);
     font-weight: 600;
     font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
-.pricing-row:last-child {
+
+.pricing-table tbody tr:last-child td {
     border-bottom: none;
 }
-.pricing-row--highlight {
+
+.pricing-table .pricing-row--highlight {
     background-color: var(--secondary-color);
     color: var(--white-color);
     font-weight: 600;
 }
+
 .pricing-note {
     text-align: center;
     margin-top: 2rem;
