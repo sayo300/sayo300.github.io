@@ -634,6 +634,7 @@ img {
     background: #ffffff;
     border-bottom: 2px solid #e5e5e5;
     padding: 0.5rem 1rem;
+    position: relative; /* Ensure z-index is respected */
     z-index: 9999;
 }
 
@@ -674,32 +675,4 @@ img {
         flex-wrap: wrap;
         white-space: normal;
     }
-}
-/* === KPO TOP BAR – CLICKABLE === */
-.kpo-topbar-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-
-.kpo-topbar {
-    cursor: pointer;
-}
-
-.kpo-topbar:hover {
-    background-color: #f7f9fc;
-}
-
-.kpo-topbar__link {
-    font-weight: 600;
-    color: #003399;
-    text-decoration: underline;
-}
-
-.kpo-topbar {
-    cursor: pointer;
-}
-
-.kpo-topbar:hover {
-    background-color: #f7f9fc;
 }
