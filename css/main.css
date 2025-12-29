@@ -629,3 +629,77 @@ img {
     text-align: center;
     line-height: 1.4;
 }
+/* === KPO TOP BAR – ONE LINE CENTERED === */
+.kpo-topbar {
+    background: #ffffff;
+    border-bottom: 2px solid #e5e5e5;
+    padding: 0.5rem 1rem;
+    z-index: 9999;
+}
+
+.kpo-topbar__container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    white-space: nowrap;
+}
+
+.kpo-topbar__logo {
+    height: 36px;
+    width: auto;
+}
+
+.kpo-topbar__text {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #222;
+    margin: 0;
+}
+
+.kpo-topbar__link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #003399;
+    text-decoration: none;
+}
+
+.kpo-topbar__link:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .kpo-topbar__container {
+        flex-wrap: wrap;
+        white-space: normal;
+    }
+}
+/* === KPO TOP BAR – CLICKABLE === */
+.kpo-topbar-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.kpo-topbar {
+    cursor: pointer;
+}
+
+.kpo-topbar:hover {
+    background-color: #f7f9fc;
+}
+
+.kpo-topbar__link {
+    font-weight: 600;
+    color: #003399;
+    text-decoration: underline;
+}
+
+.kpo-topbar {
+    cursor: pointer;
+}
+
+.kpo-topbar:hover {
+    background-color: #f7f9fc;
+}
