@@ -815,3 +815,92 @@ img {
     }
 }
 
+.kpo-page {
+    background: #f7f7f7;
+    padding: 40px 0;
+}
+
+    .kpo-page .container {
+        max-width: 1100px;
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        font-family: "Segoe UI", sans-serif;
+        line-height: 1.7;
+    }
+
+    .kpo-page h1 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2.2rem;
+    }
+
+.kpo-section {
+    margin-bottom: 40px;
+}
+
+    .kpo-section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+        color: #333;
+        border-bottom: 3px solid #c7a26a;
+        padding-bottom: 6px;
+        width: fit-content;
+    }
+
+.kpo-project-title {
+    font-size: 1.05rem;
+    font-style: italic;
+    background: #faf7f2;
+    padding: 15px 20px;
+    border-left: 5px solid #c7a26a;
+}
+
+.kpo-card {
+    background: #fafafa;
+    padding: 25px;
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+}
+
+.kpo-details {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 10px 20px;
+}
+
+    .kpo-details dt {
+        font-weight: 600;
+        color: #555;
+    }
+
+    .kpo-details dd {
+        margin: 0;
+    }
+
+.kpo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+    .kpo-grid li {
+        background: #ffffff;
+        border: 1px solid #e5e5e5;
+        border-radius: 6px;
+        padding: 15px 18px;
+    }
+
+    .kpo-grid strong {
+        color: #c7a26a;
+    }
+
+.kpo-hashtags {
+    text-align: center;
+    margin-top: 40px;
+    font-weight: 600;
+    color: #555;
+}
